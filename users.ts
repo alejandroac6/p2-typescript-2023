@@ -1,4 +1,22 @@
 
+export class Character{
+  constructor(
+    public name:string,
+    public status:string,
+    public species:string,
+    public gender:string,
+    public origin:{
+      name_origin:string
+      url_origin:string
+    },
+    public image:string,
+    public location:{
+      name_location: string;
+      url_location: string;
+    }
+  ){}
+}
+
 export class User {
   constructor(
     public gender: "male" | "female",
@@ -32,13 +50,11 @@ export class User {
 }
 
 const range= (n)=>{
-
   let i = 0
   let list=[]
   while (i<n) {
     i++
     list.push(i)
-    
   }
 
   return list
@@ -51,18 +67,16 @@ export const loadCharacters = async(n:number)=>{
 
 
   const response=await fetch(url);
-  const Characters=await response.json()
-  console.log(Characters)
+  const result=await response.json()
 
+  const world_Characters: Array <Character> =[];
 
+  result.forEach(person => {
+    const {name,status,species,gender,origin,location,image}=person
+    world_Characters.push(new Character(name,status,species,gender,origin,location,image))
+  });
 
-
-
-
-
-  
-
-
+  return world_Characters
 }
 
 export const loadUsers = async (n: number) => {

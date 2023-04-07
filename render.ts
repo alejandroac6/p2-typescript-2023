@@ -1,4 +1,4 @@
-import { User } from "./users.js";
+import { Character } from "./users.js";
 
 const head = (title: string) => `
 <head>
@@ -34,26 +34,26 @@ const head = (title: string) => `
   </style>
 </head>`;
 
-const renderUsers = (users: Array<User>) => {
+const renderCharacter = (world_Characters: Array<Character>) => {
   let html = "";
-  for (const user of users) {
+  for (const Character of world_Characters) {
     html += `<div class="user">
-      <img src="${user.picture.medium}" />
+      <img src="${Character.image}" />
       <div class="data">
-        <div class="name">${user.fullName}</div>
-        <div class="email">${user.email}</div>
+        <div class="name">${Character.name}</div>
+        <div class="email">${Character.location.name_location}</div>
       </div>
     </div>`;
   }
   return html;
 }
 
-export const render = (users: Array<User>) => {
+export const render = (world_Characters: Array<Character>) => {
   return `
 <html>
-  ${head("User List")}
+  ${head("Character List")}
   <body>
-    ${renderUsers(users)}
+    ${renderCharacter(world_Characters)}
   </body>
 </html>`;
 };
