@@ -35,14 +35,14 @@
         }
 
         .contenedor-personajes{
-            background-image: url(https://www.freepnglogos.com/uploads/rick-and-morty/rick-and-morty-background-jurokoo-deviantart-0.png);
+            background-image: linear-gradient(to bottom, rgb(30, 1, 49), rgb(18, 0, 20));
             background-size: cover;
             background-repeat: no-repeat;
             position: relative;
             height: 500px;
             padding: 1rem;
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(3,1fr);
         }
 
         body {
@@ -54,16 +54,30 @@
           background-color: aliceblue;
           margin: 3rem;
           padding: 1rem;
-          border-radius: 2%;
-          width: 250px;
+          border-radius: 5%;
+          width: 350px;
           height: 100px;
+          display: flex;
+          flex-direction: row;
         }
-        .user img {
+
+        .personaje-foto img{
+            width: 6rem;
+          border-radius: 5%;
+          margin-right: 0.7rem;
+        }
+
+        .personaje-descripcion{
+
+
+
+        }
+        /* .user img {
           width: 3rem;
           height: 3rem;
           border-radius: 50%;
           margin-right: 0.7rem;
-        }
+        } */
         .user .name {
           font-weight: bold;
         }
@@ -79,7 +93,8 @@
 
             <div class="header-logo">
                 <img src="https://www.freepnglogos.com/uploads/rick-and-morty-png/list-rick-and-morty-episodes-wikipedia-24.png" width="600" alt="Rick and Morty Logo" />
-                <p>The Characters List</p>
+                <p>Galactic Federation</p>
+                <img src="federacion_galactica.png" alt="Imagen federacion galactica">
             </div>
 
         </div>
@@ -91,14 +106,38 @@
 
     <main>
         <div class="contenedor-personajes">
-            Aqui van los contenedores de cada uno de los pesonajes
+        
+            <div class="user">
+                <div class="personaje-foto">
+                    <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" />
+                </div>
+
+                <div class="personaje-descripcion">
+                    <div class="data"></div>
+                    <div class="name">Morty Smith</div>
+                    <div class="species">Human</div>
+                    <div class="status">Alive</div>
+                    <div class="location">Location: Citadel of Ricks</div>
+                </div>
+
+            </div>
 
             <div class="user">
-                <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" />
-                <div class="data"></div>
-                <div class="name">Morty Smith</div>
-                <div class="email">Citadel of Ricks</div>
+                <div class="personaje-foto">
+                    <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" />
+                </div>
+
+                <div class="personaje-descripcion">
+                    <div class="data"></div>
+                    <div class="name">Morty Smith</div>
+                    <div class="species">Human</div>
+                    <div class="status">Alive</div>
+                    <div class="location">Location: Citadel of Ricks</div>
+                </div>
+                
+                
             </div>
+
 
             <div class="user">
                 <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" />
