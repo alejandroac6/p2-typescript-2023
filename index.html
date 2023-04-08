@@ -10,7 +10,7 @@
             background-image: url(https://www.freepnglogos.com/uploads/rick-and-morty/rick-and-morty-background-rick-and-morty-adult-swim-cartoon-wallpapers-22.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center top -350px;
+            background-position: center top -250px;
             height: 350px;
             position: relative;
 
@@ -38,14 +38,12 @@
             background-image: url(https://www.freepnglogos.com/uploads/rick-and-morty/rick-and-morty-background-jurokoo-deviantart-0.png);
             background-size: cover;
             background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            position: fixed;
+            position: relative;
+            height: 500px;
             padding: 1rem;
-
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
         }
-
-
 
         body {
           margin: 0;
@@ -53,11 +51,12 @@
         }
         .user {
           font-family: sans-serif;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: .4rem;
-          border-bottom: 1px solid #ddd;
+          background-color: aliceblue;
+          margin: 3rem;
+          padding: 1rem;
+          border-radius: 2%;
+          width: 250px;
+          height: 100px;
         }
         .user img {
           width: 3rem;
@@ -94,11 +93,45 @@
         <div class="contenedor-personajes">
             Aqui van los contenedores de cada uno de los pesonajes
 
-            <div class="personaje">
+            <div class="user">
+                <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" />
+                <div class="data"></div>
+                <div class="name">Morty Smith</div>
+                <div class="email">Citadel of Ricks</div>
+            </div>
 
+            <div class="user">
+                <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" />
+                <div class="data"></div>
+                <div class="name">Summer Smith</div>
+                <div class="email">Earth (Replacement Dimension)</div>
+            </div>
+            
+            <div class="user">
+                <img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" />
+                <div class="data"> </div>
+                <div class="name">Jerry Smith</div>
+                <div class="email">Earth (Replacement Dimension)</div>
+            </div>
+
+            <div class="user">
+                <img src="https://rickandmortyapi.com/api/character/avatar/6.jpeg" />
+                <div class="data"> </div>
+                <div class="name">Abadango Cluster Princess</div>
+                <div class="email">Abadango</div>
+        
+            </div>
+            
+            <div class="user">
+                <img src="https://rickandmortyapi.com/api/character/avatar/7.jpeg" />
+                <div class="data"></div>
+                <div class="name">Abradolf Lincler</div>
+                <div class="email">Testicle Monster Dimension
             </div>
 
         </div>
+
+        
     
 
     </main>
