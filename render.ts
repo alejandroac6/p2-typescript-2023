@@ -41,7 +41,7 @@ const renderCharacter = (world_Characters: Array<Character>) => {
       <img src="${Character.image}" />
       <div class="data">
         <div class="name">${Character.name}</div>
-        <div class="email">${Character.location.name_location}</div>
+        <div class="email">${Character.location.name}</div>
       </div>
     </div>`;
   }

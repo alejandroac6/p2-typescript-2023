@@ -73,8 +73,10 @@ export const loadCharacters = async(n:number)=>{
 
   result.forEach(person => {
     const {name,status,species,gender,origin,location,image}=person
-    world_Characters.push(new Character(name,status,species,gender,origin,location,image))
+
+    world_Characters.push(new Character(name,status,species,gender,origin,image,location))
   });
+
 
   return world_Characters
 }
@@ -93,6 +95,4 @@ export const loadUsers = async (n: number) => {
 };
 
 // loadUsers(3)
-loadCharacters(5)
-
 // console.log(range(5))
