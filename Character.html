@@ -4,34 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;700&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <title>Galactic Federation-Report</title>
 
     <style>
-        body{
-            background-image: url(https://www.freepnglogos.com/uploads/rick-and-morty/rick-and-morty-background-rick-and-morty-wallpapers-wallpaper-cave-10.png);
-            background-repeat: no-repeat;
-            /* background-size: cover; */
-            max-width: auto;
+        html, body {
             height: 100%;
-            position: relative;
-            
-        }
-
+            margin: 0;
+            }
         .layout{
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            height: 50rem;
-
-            display: flex;
+            background-image: linear-gradient(to bottom, rgb(30, 1, 49), rgb(18, 0, 20));
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            padding: 1rem;
+            padding-top: 5rem;
         }
+
+        .character-container{
+            background-color:aliceblue;
+            outline-width: 1rem;
+            outline-style: double;
+            outline-color: aquamarine;
+            border-radius: 2rem;
+            padding: 1rem;
+            box-shadow: 2rem;
+            margin: 2rem;
+            font-family: 'Kanit';
+        }
+
+        .character-title{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: aquamarine;
+            height: 10rem;
+            margin: -1rem -1rem 1rem -1rem;
+            border-radius: 2rem 2rem 0 0;
+
+
+        }
+
+        .character-container p{
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .federation-img{
+            border-radius: 50%;
+            width: auto;
+            height: 8rem;
+            margin-right: 2rem;
+        }
+
+
 
     </style>
 </head>
 <body>
     <div class="layout">
 
-        <div class="character-container"></div>
+        <div class="character-container">
+
+            <div class="character-title">
+                <img class="federation-img" src="/federacion_galactica.png" alt="Imagen de la Federacion Galactica">
+                <p>Galactic Federacion Report</p>
+            </div>
+            <div class="user user-Dead">
+                <div class="personaje-foto">
+                    <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" />
+                </div>
+
+                <div class="personaje-descripcion">
+                    <div class="name">Morty Smith</div>
+                    <div class="species">Human</div>
+                    <div class="status"> <span class="status-Dead"></span> Dead</div>
+                    <div class="location"><span>Location: </span>Citadel of Ricks</div> 
+                </div>
+
+            </div>
+
+        </div>
+
 
     </div>
 
