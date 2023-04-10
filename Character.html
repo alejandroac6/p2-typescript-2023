@@ -31,6 +31,7 @@
             box-shadow: 2rem;
             margin: 2rem;
             font-family: 'Kanit';
+            font-size: 1.25rem;
         }
 
         .character-title{
@@ -48,7 +49,7 @@
         }
 
         .character-container p{
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: bold;
         }
 
@@ -59,7 +60,65 @@
             margin-right: 2rem;
         }
 
+        .info-container{
+            display: flex;
+            flex-direction: row;
+        }
 
+        .personaje-foto img{
+            border-radius: 1rem;
+            width: 15rem;
+            margin-right: 1.5rem;
+
+        }
+
+        .negrita{
+            font-weight: bold;
+        }
+
+        .status{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .status-Alive{
+            height: 0.5rem;
+            width: 0.5rem;
+            margin-right: 0.5rem;
+            background: rgb(85, 204, 68);
+            border-radius: 50%;
+            animation: changeColor-alive 2s infinite;
+        }
+
+
+        @keyframes changeColor-alive{
+            0%, 50% {
+            background-color: rgb(34, 78, 29); 
+        }
+            51%, 100% {
+            background-color:  rgb(85, 204, 68); 
+        }
+        }
+        
+        .status-Dead{
+            height: 0.75rem;
+            width: 0.75rem;
+            margin-right: 0.5rem;
+            background: rgb(149, 15, 15);
+            border-radius: 50%;
+            animation: changeColor-dead 2s infinite;
+
+        }
+
+        @keyframes changeColor-dead{
+            0%, 50% {
+            background-color: #ff0000; 
+        }
+            51%, 100% {
+            background-color:  rgb(149, 15, 15); 
+        }
+        }
 
     </style>
 </head>
@@ -72,16 +131,17 @@
                 <img class="federation-img" src="/federacion_galactica.png" alt="Imagen de la Federacion Galactica">
                 <p>Galactic Federacion Report</p>
             </div>
-            <div class="user user-Dead">
+            <div class="info-container">
                 <div class="personaje-foto">
                     <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" />
                 </div>
 
                 <div class="personaje-descripcion">
-                    <div class="name">Morty Smith</div>
-                    <div class="species">Human</div>
+                    <div class="name"><span class="negrita">Name: </span>Morty Smith</div>
+                    <div class="species"><span class="negrita">Species: </span>Human</div>
                     <div class="status"> <span class="status-Dead"></span> Dead</div>
-                    <div class="location"><span>Location: </span>Citadel of Ricks</div> 
+                    <div class="location"><span class="negrita">Location: </span>Citadel of Ricks - Space station</div> 
+                    <div class="dimension"><span class="negrita">Dimension: </span>Unknown</div> 
                 </div>
 
             </div>
