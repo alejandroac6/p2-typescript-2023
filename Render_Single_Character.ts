@@ -119,7 +119,6 @@ const head = () => `
 </head>`;
 
 // para cada personaje generaremos un html distinto
-
 export const renderSingleCharacter = (SingleCharacter:Character)=>{
     const {image,name,species,status,location}=SingleCharacter
     const{name_location,type_location,dimension_location}=location
