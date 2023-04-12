@@ -165,7 +165,7 @@ const renderCharacter = (world_Characters: Array<Character>) => {
       </div>
 
       <div class="personaje-descripcion">
-          <div class="name">${Character.name}</div>
+          <a class="name" href="${Character.html}">${Character.name}</a>
           <div class="species">${Character.species}</div>
           <div class="status"> <span class="status-${Character.status}"></span> ${Character.status}</div>
           <div class="location"><span>Location: </span>${Character.location.name_location}</div> 

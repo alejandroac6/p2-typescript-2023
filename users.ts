@@ -15,8 +15,8 @@ export class Character{
       url_location: string;
       type_location:string="unknown";
       dimension_location:string="unknown";
-
-    }
+    },
+    public html:string="/",
   ){}
 }
 
@@ -92,8 +92,11 @@ export const loadCharacters = async(n:number)=>{
     // asignamos valores
     location.type_location=type
     location.dimension=dimension
+    
+    //asignamos ruta html
+    const html=`/${name}`
 
-    world_Characters.push(new Character(name,status,species,gender,origin,image,location))
+    world_Characters.push(new Character(name,status,species,gender,origin,image,location,html))
 
 
   });
