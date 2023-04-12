@@ -13,6 +13,9 @@ export class Character{
     public location:{
       name_location: string;
       url_location: string;
+      type_location:string="unknown";
+      dimension_location:string="unknown";
+
     }
   ){}
 }
@@ -49,7 +52,7 @@ export class User {
   }
 }
 
-const range= (n)=>{
+const range= (n:number)=>{
   let i = 0
   let list=[]
   while (i<n) {
@@ -71,12 +74,29 @@ export const loadCharacters = async(n:number)=>{
 
   const world_Characters: Array <Character> =[];
 
-  result.forEach(person => {
+  result.forEach(person:any => {
+
+    // Creamos la persona, extrayendo de la API los campos que necesitamos
     const {name,status,species,gender,origin,location,image}=person
+    
+
+    //Dentro de la URL de current location buscamos la info de type_dimension y de dimension_location, la guardamos dentro de location
+
+    const url_location=location.url_location;
+    
+    const response_location= await fetch(url_location);
+    const result_location= await response_location.json();
+
+    const {type,dimension}=response_location
+    
+    // asignamos valores
+    location.type_location=type
+    location.dimension=dimension
 
     world_Characters.push(new Character(name,status,species,gender,origin,image,location))
-  });
 
+
+  });
 
   return world_Characters
 }
