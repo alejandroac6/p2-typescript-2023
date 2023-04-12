@@ -11,6 +11,11 @@ const head = (title: string) => `
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;700&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <style>
 
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
         html, body {
             height: 100%;
             margin: 0;
