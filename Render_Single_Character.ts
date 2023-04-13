@@ -127,13 +127,9 @@ export const renderSingleCharacter = (SingleCharacter:Character)=>{
     const type_location:string=location.type_location
     let dimension_location:string=location.dimension
 
-    console.log(name_location,type_location,dimension_location)
-
     if (!dimension_location) {
         dimension_location="Undefined"
     }
-
-    console.log(name_location,type_location,dimension_location)
 
     return `
     <html>

@@ -3,13 +3,18 @@ import { render } from "./render.js";
 import { renderSingleCharacter } from "./Render_Single_Character.js";
 import { loadCharacters, Character } from "./users.js";
 
-const Characters = await loadCharacters(5);
+const Characters = await loadCharacters(20);
 
 // Single Character recibe un personaje y crea un html especifico, debemos hacer un loop que recorra cada personaje y cree un hmtl
 const SingleCharacter_html=async (Characters:Array<Character>)=>{
     for (const SingleCharacter of Characters) {
         const html_Single=renderSingleCharacter(SingleCharacter)
-        await writeFile(`${SingleCharacter.html}`,html_Single)
+
+        // Definimos el nombre del html
+
+        const html_name:String = SingleCharacter.html.replace("/","")
+
+        await writeFile(`${html_name}.html`,html_Single)
     }
 }
 

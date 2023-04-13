@@ -81,11 +81,16 @@ export const loadCharacters = async(n:number)=>{
 
     //Dentro de la URL de current location buscamos la info de type_dimension y de dimension_location, la guardamos dentro de location
 
-    const url_location=location.url;
+    let url_location:String=location.url;
+
+    if (!url_location) {
+      url_location="https://rickandmortyapi.com/api/location/3"     
+    }
     const response_location= await fetch(url_location);
     const result_location= await response_location.json();
 
     const {type,dimension}=response_location
+    
     
     // asignamos valores
     location.type_location=type
