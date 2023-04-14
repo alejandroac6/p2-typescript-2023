@@ -3,7 +3,7 @@ import { render } from "./render.js";
 import { renderSingleCharacter } from "./Render_Single_Character.js";
 import { loadCharacters, Character } from "./users.js";
 
-const Characters = await loadCharacters(20);
+const Characters = await loadCharacters(40);
 
 // Single Character recibe un personaje y crea un html especifico, debemos hacer un loop que recorra cada personaje y cree un hmtl
 const SingleCharacter_html=async (Characters:Array<Character>)=>{
