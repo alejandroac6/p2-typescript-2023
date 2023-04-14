@@ -47,7 +47,7 @@ const head = () => `
         }
 
         .character-container p{
-            font-size: 3.5rem;
+            font-size: 3.25rem;
             font-weight: bold;
         }
         .federation-img{
@@ -62,12 +62,48 @@ const head = () => `
             flex-direction: row;
         }
 
+
         .personaje-foto img{
             border-radius: 1rem;
             width: 15rem;
             margin-right: 1.5rem;
 
         }
+
+
+        @media screen and (max-width: 760px ) {
+            .character-container p{
+                font-size: 2.5rem;
+
+            }
+            .federation-img{
+                height: 7rem;
+                margin-left: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 600px ) {
+            .info-container{
+                flex-direction: column;
+                align-items: center;
+            
+            }
+            
+            .personaje-foto img{
+                margin-bottom: 2rem;
+                margin-left: 1rem;
+            }
+
+            .character-container p{
+                font-size: 1.75rem;
+
+            }
+
+            .federation-img{
+                height: 6rem;
+            }
+        }
+
         .negrita{
             font-weight: bold;
         }
