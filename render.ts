@@ -89,6 +89,8 @@ const head = (title: string) => `
         }
       }
 
+
+
       body {
         margin: 0;
         padding: 0;
@@ -106,6 +108,23 @@ const head = (title: string) => `
         padding: 0.5rem;
         transition: background-color 0.75s ease;
 
+      }
+
+      @media screen and (max-width:600px){
+        .user{
+          width: 23rem;
+        }
+
+        .header-logo img{
+          width: 400px;
+          height: auto;
+          margin-left: 2rem;
+        }
+
+        .galactic-logo img{
+          width: 5rem;
+          margin-left: 0rem;
+        }
       }
       .user-Alive:hover{
           background-color: aquamarine;            
