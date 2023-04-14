@@ -89,8 +89,8 @@ export const loadCharacters = async(n:number)=>{
     const response_location= await fetch(url_location);
     const result_location= await response_location.json();
 
-    const {type,dimension}=response_location
-    
+    const {type,dimension}=result_location
+   
     
     // asignamos valores
     location.type_location=type

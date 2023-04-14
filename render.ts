@@ -196,6 +196,7 @@ const head = (title: string) => `
 const renderCharacter = (world_Characters: Array<Character>) => {
   let html = "";
   for (const Character of world_Characters) {
+
     html += `
     <div class="user user-${Character.status}">
       <div class="personaje-foto">
@@ -206,7 +207,7 @@ const renderCharacter = (world_Characters: Array<Character>) => {
           <a class="name" href="${Character.html}.html">${Character.name}</a>
           <div class="species">${Character.species}</div>
           <div class="status"> <span class="status-${Character.status}"></span> ${Character.status}</div>
-          <div class="location"><span>Location: </span>${Character.location.name_location}</div> 
+          <div class="location"><span>Location: </span>${Character.location.name}</div> 
       </div>
 
     </div>`;
